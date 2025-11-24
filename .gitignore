@@ -1,3 +1,4 @@
 \venv
 \archive
-\backend\data
+backend/data/brake_sales_clean.csv
+backend/data/*.csv
