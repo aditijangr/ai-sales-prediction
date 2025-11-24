@@ -1,8 +1,8 @@
 import pandas as pd
 import numpy as np
 import tensorflow as tf
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import LSTM, Dense
+from keras.models import Sequential
+from keras.layers import LSTM, Dense
 from sklearn.preprocessing import MinMaxScaler
 import os
 
@@ -62,6 +62,6 @@ for product in products:
     safe_name = product.replace(" ", "_")
 
     model.save(f"{model_dir}/{safe_name}.h5")
-    np.save(f"{model_dir}/{safe_name}_scaler.npy", scaler.data_min_)
+    # np.save(f"{model_dir}/{safe_name}_scaler.npy", scaler.data_min_)
 
 print("\n✔ All LSTM models trained and saved!")
